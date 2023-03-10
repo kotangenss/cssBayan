@@ -1,3 +1,5 @@
+/* -------------- Reset Styles -------------- */
+
 * {
    padding: 0;
    margin: 0;
@@ -32,7 +34,7 @@ body {
    background: white;
 }
 
-/*====================================================================*/
+/* -------------- Connect Font -------------- */
 
 @font-face {
    font-family: 'Auxilia';
@@ -46,7 +48,7 @@ body {
    font-weight: 400;
 }
 
-/*====================================================================*/
+/* -------------- Fixed layout -------------- */
 
 .wrapper {
    min-height: 100%;
@@ -65,9 +67,6 @@ body {
    transition: all 0.3s ease-in-out;
    
 }
-
-/*====================================================================*/
-
 
 .meme-item {
    display: flex;
@@ -131,6 +130,7 @@ body {
    transition: all 0.3s ease-in-out;
 }
 
+/* -------------- Adaptive layout -------------- */
 
 @media (min-width: 300px) {
    h1 {
