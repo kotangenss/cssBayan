@@ -81,7 +81,6 @@ body {
    -webkit-appearance: none;
    appearance: none;
 
-   position: absolute;
    width: 0%;
    height: 0%;
    transition: all 0.3s ease-in-out;
@@ -118,7 +117,6 @@ body {
 .meme-item__body {
    height: 0;
    overflow: hidden;
-   position: relative;
    transition: all 0.3s ease-in-out;
 }
 
