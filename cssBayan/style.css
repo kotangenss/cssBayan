@@ -1,0 +1,318 @@
+/*====================================================================*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 100%;
+   font-size: 0.8750em;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+/*====================================================================*/
+
+@font-face {
+   font-family: 'Auxilia';
+   src: url(../cssBayan/assets/fonts/Auxilia.ttf) format('ttf');
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: 'Auxilia-Bold';
+   src: url(../cssBayan/assets/fonts/Auxilia-Bold.ttf) format('ttf');
+   font-weight: 400;
+}
+
+/*====================================================================*/
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   height: 100%;
+   background: white;
+   font-size: 1.0625em;
+   font-family: "Roboto", sans-serif;
+   font-weight: 300;
+}
+
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   margin: 0 auto;
+}
+
+.container {
+   padding: 0em 1em;
+   max-width: 50vw;
+   margin: 0 auto;
+   -webkit-box-sizing: content-box;
+   box-sizing: content-box;
+}
+
+h1 {
+   font-family: 'Auxilia';
+   text-align: center;
+   font-size: 3rem;
+   line-height: 130%;
+   /* margin: 60px 0px 80px; */
+   margin: 1.5em 0em 2em;
+}
+
+h1 p {
+   color: white;
+   padding: 0.1em;
+   background-color: black;
+   transform: rotate(-2deg);
+   margin-bottom: -50px;
+}
+
+h2 {
+   font-family: 'Auxilia';
+   font-size: 1.5rem;
+   line-height: 100%;
+   letter-spacing: 0.1em;
+}
+
+/* h1 span::before {
+   content: '';
+   position: absolute;
+   width: 300px;
+   height: 60px;
+   background: #000000;
+   transform: rotate(-2.5deg);
+   z-index: -1;
+   margin-left: -8px;
+} */
+
+/*====================================================================*/
+
+
+.memes__container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.memes__accordion {
+   margin-bottom: 10rem;
+}
+
+.memes__accordion:hover .head-item__icon {
+   opacity: 1;
+   transition: all 0.3s ease;
+}
+
+/* @media (hover: hover) {
+   .memes__accordion:hover .head-item__icon {
+      opacity: 1;
+      transition: all 0.3s ease;
+   }
+} */
+
+.meme-item__head h2 {
+   opacity: 0.5;
+   transition: all 0.3s ease;
+}
+
+.memes__accordion:hover .meme-item__head h2 {
+   transition: all 0.3s ease;
+   opacity: 1;
+}
+
+.memes__accordion .meme-item__input:checked + .meme-item__head + .meme-item__body {
+   height: auto;
+}
+
+/*====================================================================*/
+
+
+.meme-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 50vw;
+   border-top: 0.3em solid black;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.meme-item__body img:active {
+   cursor: url('./assets/rolling.cur'), auto;
+}
+
+.meme-item:hover .meme-item__body {
+   transition: all 0.3s ease;
+   height: 100%;
+   box-sizing: border-box;
+   transition: all 0.3s ease;
+}
+
+.meme-item:hover .meme-item__body img {
+   width: 100%;
+   height: 100%;
+   padding: 2em 14em;
+   transition: all 0.3s ease;
+}
+
+.meme-item__head {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   background-color: white;
+   padding: 0.5em 2em;
+
+   cursor: pointer;
+   transition: all 0.3s ease; 
+}
+
+.head-item__icon {
+   opacity: 0;
+   transition: all 0.3s ease;
+}
+
+.meme-item__input {
+   /* display: none; */
+   -webkit-appearance: none;
+   appearance: none;
+
+   position: absolute;
+   width: 0;
+   height: 0;
+   transition: all 0.3s ease;
+}
+
+.meme-item__input:checked ~ .meme-item__body {
+   transition: all 0.3s ease;
+   height: 100%;
+   width: auto;
+   transition: all 0.3s ease;
+}
+
+.meme-item__input:checked ~ .meme-item__body img {
+   width: 100%;
+   height: 100%;
+   padding: 2em 14em;
+   transition: all 0.3s ease;
+}
+
+.meme-item__input:checked ~ .meme-item__head {
+   background-color: #B4AAEB;
+   transition: all 0.3s ease;
+}
+
+.meme-item__input:checked ~ .meme-item__head .head-item__icon {
+   rotate: 45deg;
+   transition: all 0.3s ease;
+}
+
+.meme-item__input:checked ~ .meme-item__head h2 {
+   opacity: 1;
+   transition: all 0.3s ease;
+}
+
+.meme-item__body {
+   height: 0;
+   overflow: hidden;
+   position: relative;
+   transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+.meme-item__body img {
+   display: block;
+   width: 0%;
+   height: 0%;
+   margin: 0 auto;
+   padding: 0em;
+   transition: all 0.3s ease;
+}
+
+/* .meme-item__body::before {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: #B4AAEB;
+   transform: rotate(-5deg);
+   z-index: -1;
+   transition: all 0.3s ease;
+} */
