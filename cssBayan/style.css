@@ -289,23 +289,30 @@ body {
       cursor: pointer;
    }
 
-   .memes__accordion:hover .meme-item__head h2 {
-      transition: all 0.3s ease-in-out;
-      opacity: 1;
-   }
-
    .head-item__icon {
       opacity: 0;
       transition: all 0.3s ease-in-out;
    }
 
+   .meme-item__body {
+      cursor: pointer
+   }
+
+   .memes__author {
+      font-size: 1.7rem;
+      margin-bottom: 5rem;
+   }
+}
+
+@media (hover: hover) and (pointer: fine) {
+   .memes__accordion:hover .meme-item__head h2 {
+      transition: all 0.3s ease-in-out;
+      opacity: 1;
+   }
+
    .memes__accordion:hover .head-item__icon {
       opacity: 1;
       transition: all 0.3s ease-in-out;
-   }
-
-   .meme-item__body {
-      cursor: pointer
    }
 
    .meme-item:hover .head-item__icon {
@@ -324,10 +331,5 @@ body {
       height: 100%;
       padding: 2em 0em;
       transition: all 0.3s ease-in-out;
-   }
-
-   .memes__author {
-      font-size: 1.7rem;
-      margin-bottom: 5rem;
    }
 }
